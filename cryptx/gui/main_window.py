@@ -1,11 +1,11 @@
-from gui.file_decrypt_ui import FileDecryptTab
-from gui.recommender_ui import RecommenderTab
-from gui.key_vault_ui import KeyVaultTab
 from PyQt6.QtWidgets import QMainWindow, QTabWidget
 from gui.encryption_ui import EncryptionTab
 from gui.password_checker import PasswordCheckerTab
+from gui.key_vault_ui import KeyVaultTab
+from gui.recommender_ui import RecommenderTab
 from gui.multi_algo_ui import MultiAlgoTab
 from gui.file_encrypt_ui import FileEncryptTab
+from gui.file_decrypt_ui import FileDecryptTab
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -30,7 +30,4 @@ class MainWindow(QMainWindow):
         self.tabs.addTab(self.multi_algo_tab, "Multi-Algorithm Lab")
         self.tabs.addTab(FileEncryptTab(), "📂 File Encryptor")
         self.tabs.addTab(FileDecryptTab(), "🔓 File Decryptor")
-
-
-
 

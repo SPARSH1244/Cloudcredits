@@ -5,14 +5,12 @@ import os
 from datetime import datetime
 
 def export_to_json(data, filename="export.json"):
-    path = os.path.join("reports", filename)
-    with open(path, "w") as f:
+    with open(filename, "w") as f:
         json.dump(data, f, indent=4)
-    return path
+    return filename
 
 def export_to_pdf(data, filename="export.pdf"):
-    path = os.path.join("reports", filename)
-    c = canvas.Canvas(path, pagesize=A4)
+    c = canvas.Canvas(filename, pagesize=A4)
     width, height = A4
 
     y = height - 50
@@ -30,4 +28,4 @@ def export_to_pdf(data, filename="export.pdf"):
             y -= 20
 
     c.save()
-    return path
+    return filename

@@ -1,0 +1,6 @@
+pycryptodome
+cryptography
+PyQt6
+scikit-learn
+joblib
+reportlab
